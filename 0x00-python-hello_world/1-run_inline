@@ -1,0 +1,4 @@
+#!/bin/bash
+python3 << END
+print(f"Best School: {88+10}")
+END
