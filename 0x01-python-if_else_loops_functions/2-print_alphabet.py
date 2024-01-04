@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-alphabet = ord('a')
-while(alphabet <= ord('z')):
-    print(chr(alphabet), end='')
-    alphabet += 1
+for loer_case in range(ord('a'), ord('z') + 1):
+    print("{}".format(chr(loer_case)), end = '')
