@@ -11,7 +11,7 @@ class Square:
 
     __size = None
 
-    def __init__(self, _Square_size):
+    def __init__(self, _Square_size = []):
         """
         The __init__ is used as a constructor
         Note:
