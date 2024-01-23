@@ -1,1 +1,1 @@
-Write an empty class Square that defines a square
+Python - Classes and Objects  OBJECT ORIENTED PROGRAMMING
