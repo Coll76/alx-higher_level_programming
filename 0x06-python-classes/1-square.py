@@ -6,7 +6,6 @@ Docstyle for class Square
 
 class Square:
     def __init__(self, size=None):
-        __size = None
         """
         The __init__ is used as a constructor
         Note:
@@ -15,6 +14,7 @@ class Square:
             _Square_size: the size of Square
         """
 
-        if size is not None:
+        """if size is not None:
             _Square_size = size
-            self._Square_size = _Square_size
+            self._Square_size = _Square_size"""
+        self.__size = size
