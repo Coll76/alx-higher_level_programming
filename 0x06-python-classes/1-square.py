@@ -5,13 +5,8 @@ Docstyle for class Square
 
 
 class Square:
-    """
-    set the size attribute to private
-    """
-
-    __size = None
-
     def __init__(self, size=None):
+        __size = None
         """
         The __init__ is used as a constructor
         Note:
