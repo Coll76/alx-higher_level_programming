@@ -54,8 +54,8 @@ class Square:
         """
         prints the suare ith the character #
         """
-        for _ in range(self.__size):
-            if self.__size == 0:
-                print()
-            else:
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
                 print("#" * self.__size)
