@@ -55,6 +55,7 @@ class Square:
         prints the suare ith the character #
         """
         for _ in range(self.__size):
-            if self.__size > 0:
+            if self.__size == 0:
+                print()
+            else:
                 print("#" * self.__size)
-            print()
