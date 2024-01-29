@@ -2,6 +2,8 @@ class Rectangle:
     """
     class id Rectangle
     """
+
+
     def __init__(self, width=0, height=0):
         """
         __init__ is used for object initialization
