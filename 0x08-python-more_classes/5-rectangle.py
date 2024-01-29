@@ -1,7 +1,7 @@
 class Rectangle:
-    """
-    class id Rectangle
-    """
+"""
+class id Rectangle
+"""
 
 
     def __init__(self, width=0, height=0):
