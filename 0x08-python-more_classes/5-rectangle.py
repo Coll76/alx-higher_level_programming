@@ -1,9 +1,13 @@
-#!/usr/bin/python3
+#!/usr/bin/python3i
+"""
+Docstyle for class Rectanle
+"""
+
+
 class Rectangle:
     """
-    class id Rectangle
+    class is Rectangle
     """
-
     def __init__(self, width=0, height=0):
         """
         __init__ is used for object initialization
