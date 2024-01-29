@@ -5,4 +5,7 @@ Docstyle for class Rectangle
 
 
 class Rectangle:
+    """
+    class Rectangle
+    """
     pass
