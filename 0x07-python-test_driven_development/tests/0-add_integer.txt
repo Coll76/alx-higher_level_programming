@@ -1,0 +1,51 @@
+# 0-add_integer.txt
+from ``0-add_integer`` module
+============================
+
+using ``add`` function
+=====================
+
+##Test case one: Addition of 2 integers
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add(8, 8)
+	l6
+
+## Test case 2: different fuctionality signs
+
+	>>> add_integer(6, -5)
+	l
+
+## Test case 3: one argument
+
+	>>> add_integer(6)
+	l04
+
+## Test case 4: floating point value
+
+	>>> add_integer(100.3, -2)
+	98
+
+## Test case 5: string argument
+
+	>>> add_integer("string", 6)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+## Test case 6: b as string
+
+	>>> add_integer(7, '9')
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+## Test case 7: None argument
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer or b must be an integer
+
+## Test case 8: both as strings
+
+	>>> add_integer('srr', 'the')
+	Traceback('most recent call last')
+	TypeError: a must be an integer or b must be an integer
