@@ -5,7 +5,7 @@ Using ``say_my_name``
 --------------------
 
 ::
-
+This test case ill check the condition hen both first_name and last_name are strings
     >>> say_my_name = __import__('3-say_my_name').say_my_name 
     >>> say_my_name('Collins', 'Muthee')
     My name is Collins Muthee
