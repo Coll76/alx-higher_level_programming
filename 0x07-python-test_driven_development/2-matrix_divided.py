@@ -23,10 +23,14 @@ def matrix_divided(matrix, div):
     for ro in matrix:
         for j in ro:
             if not isinstance(j, (int, float)):
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix (list of lists) '
+                                'of integers/floats')
             if not isinstance(div, (int, float)):
                 raise TypeError('div must be a number')
             if div == 0:
                 raise ZeroDivisionError('division by zero')
-            ne_matrix = list(map(lambda ro: list(map(lambda j: round((j / div), 2), ro)), matrix))
+            ne_matrix = list(
+                map(lambda ro: list(
+                    map(lambda j: round((j / div), 2), ro)), matrix)
+                )
         return ne_matrix
