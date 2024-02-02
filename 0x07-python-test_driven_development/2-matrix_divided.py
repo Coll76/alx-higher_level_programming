@@ -28,6 +28,5 @@ def matrix_divided(matrix, div):
                 raise TypeError('div must be a number')
             if div == 0:
                 raise ZeroDivisionError('division by zero')
-            ne_matrix = list(map(lambda ro: list(map(lambda j : round((j / div), 2), ro)), matrix))
+            ne_matrix = list(map(lambda ro: list(map(lambda j: round((j / div), 2), ro)), matrix))
         return ne_matrix
-
