@@ -1,0 +1,50 @@
+From ``2-matrix_divided`` module
+=====================================
+
+Using ``matrix_divided`` function
+---------------------------------
+
+``matrix_divided`` function returns a new matrix whose elements 
+have been divided by a number
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[8, 6, 4],[4, 8, 4],[5, 7, 8]]
+    >>> matrix_divided(matrix, 2)
+    [[4.0, 3.0, 2.0], [2.0, 4.0, 2.0], [2.5, 3.5, 4.0]]
+
+Test case when output ill be of floating point values with more than two decimal places
+
+::
+
+    >>> matrix = [[8, 6, 4],[4, 8, 4],[5, 7, 8]]
+    >>> matrix_divided(matrix, 3)
+    [[2.67, 2.0, 1.33], [1.33, 2.67, 1.33], [1.67, 2.33, 2.67]]
+
+Test case where divisor is 0
+
+::
+
+    >>> matrix = [[8, 6, 4],[4, 8, 4],[5, 7, 8]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+Test case if div is not a number(int or float value)
+
+::
+
+    >>> matrix = [[8, 6, 4],[4, 8, 4],[5, 7, 8]]
+    >>> matrix_divided(matrix, '9')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+Test case for matrix containing rows of different sizes
+
+::
+
+    >>> matrix = [[8, 6, 4],[4, 8, 4],[5, 7, 8, 6]]
+    >>> matrix_divided(matrix, 8)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
