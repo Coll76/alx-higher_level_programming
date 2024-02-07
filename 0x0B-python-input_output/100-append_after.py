@@ -13,6 +13,7 @@ def append_after(filename="", search_string="", new_string=""):
             temp_file.write(line)
             if search_string in line:
                 temp_file.write(new_string + '\n')
-    with open('temp_file', 'r') as temp_file, open(filename, 'w') as final_file:
-        for line in temp_file:
-            final_file.write(line)
+    with open('temp_file', 'r') as temp_file:
+        with open(filename, 'w') as final_file:
+            for line in temp_file:
+                final_file.write(line)
