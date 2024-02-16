@@ -26,7 +26,7 @@ class Square(Rectangle):
         """
         return string repesentation of an object
         """
-        return '[Square] ({}) {}/{} - {}'.format(self.id, self.__x, self.__y, self.__width)
+        return f'[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}'
     """
     area method to override that of superclass Rectangle
     """
@@ -63,7 +63,8 @@ class Square(Rectangle):
         """
         sets the size to value
         """
-        self.validator('size', value)
+        self.__height = value
+        self.__width = value
     """
     Update the class Square by adding the public method
     def update(self, *args, **kwargs) that assigns attributes
