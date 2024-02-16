@@ -35,7 +35,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError(f'{attribute_name} must be an integer')
-        if attribute_name in {'width', 'height'} and value <=0:
+        if attribute_name in {'width', 'height'} and value <= 0:
             raise ValueError(f'{attribute_name} must be > 0')
         if attribute_name in {'x', 'y'} and value < 0:
             raise ValueError(f'{attribute_name} must be >= 0')
