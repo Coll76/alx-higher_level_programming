@@ -19,10 +19,10 @@ class Square(Rectangle):
             id: unique for the square
         """
         super().__init__(size, size, x, y, id)
+        self.__size = size
         """
         __str__ gives an informal string repesentation of an object
         """
-        self.__size = size
     def __str__(self):
         """
         return string repesentation of an object
