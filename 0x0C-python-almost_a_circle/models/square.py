@@ -27,7 +27,7 @@ class Square(Rectangle):
         """
         return string repesentation of an object
         """
-        return f'[Square] ({self.id}) {self.__x}/{self.__y} - {self.__size}'
+        return f'[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}'
     """
     area method to override that of superclass Rectangle
     """
