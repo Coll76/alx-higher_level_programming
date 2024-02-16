@@ -54,7 +54,7 @@ class Square(Rectangle):
         """
         retrieves the size value of Square
         """
-        return self.__size
+        return self.__width
     """
     setter for size
     """
