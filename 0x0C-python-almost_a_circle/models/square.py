@@ -35,7 +35,7 @@ class Square(Rectangle):
         """
         overrides that of superclass Rectangle
         """
-        return self.__size * self.__size
+        return self.__width * self.__width
     """
     method to print to stdout as well as override that of Rectangle
     """
