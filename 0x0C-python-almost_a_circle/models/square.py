@@ -19,7 +19,6 @@ class Square(Rectangle):
             id: unique for the square
         """
         super().__init__(size, size, x, y, id)
-        self.__size = size
         """
         __str__ gives an informal string repesentation of an object
         """
@@ -27,7 +26,7 @@ class Square(Rectangle):
         """
         return string repesentation of an object
         """
-        return f'[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}'
+        return '[Square] ({}) {}/{} - {}'.format(self.id, self.__x, self.__y, self.__width)
     """
     area method to override that of superclass Rectangle
     """
@@ -35,7 +34,7 @@ class Square(Rectangle):
         """
         overrides that of superclass Rectangle
         """
-        return self.__width * self.__width
+        return self.__height * self.__width
     """
     method to print to stdout as well as override that of Rectangle
     """
@@ -43,11 +42,10 @@ class Square(Rectangle):
         """
         print to stdout uses #
         """
-        if self.__size is not None:
-            for _ in range(self.__y):
-                print()
-            for _ in range(self.__size):
-                print(' ' * self.__x + '#' * self.__size)
+        for _ in range(self.__y):
+            print()
+        for _ in range(self.__height):
+            print(' ' * self.__x + '#' * self.__width)
     """
     getter for size
     """
