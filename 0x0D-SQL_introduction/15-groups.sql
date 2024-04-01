@@ -2,6 +2,6 @@
 -- The result should display:
 -- the score
 -- the number of records for this score with the label number
-SELECT `name`, COUNT(*) AS number
+SELECT `score`, COUNT(*) AS number
 FROM `second_table`
-GROUP BY `name`;
+GROUP BY `score`;
