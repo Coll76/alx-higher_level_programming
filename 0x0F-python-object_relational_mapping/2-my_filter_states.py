@@ -29,7 +29,8 @@ def main():
             db = database
             )
     cur = db.cursor()
-    cur.execute('SELECT * FROM states WHERE name LIKE "N%" AND name = "{}" ORDER BY id ASC'.format(nam))
+    cur.execute('SELECT * FROM states WHERE name = %s ORDER BY id ASC', (nam,))
+    cur.execZZ
     ro = cur.fetchall()
     for r in ro:
         print(r)
