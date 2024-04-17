@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+import module MySQLdb to connect python code
+to our mysql server. Impoet sys to manipulate the commnd line arguments
+"""
 
 import MySQLdb
 import sys
