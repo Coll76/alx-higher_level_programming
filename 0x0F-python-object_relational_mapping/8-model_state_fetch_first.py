@@ -31,9 +31,12 @@ def main():
             pool_pre_ping=True)
     session = sessionmaker(bind=engine)
     sess = session()
-    output = sess.query(State).filter(State.id == 1)
-    for ro in output:
-        print(f"{ro.id}: {ro.name}")
+    output = sess.query(State).filter(State.id == 1).first()
+    if output is None:
+        print(" ")
+        print()
+    else:
+        print(f"{output.id}: {output.name}")
     sess.close()
 
 
