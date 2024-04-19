@@ -33,7 +33,7 @@ def main():
     sess = session()
     output = sess.query(State).filter(State.id == 1).first()
     if output is None:
-        print(" ")
+        print("Nothing")
         print()
     else:
         print(f"{output.id}: {output.name}")
