@@ -29,14 +29,12 @@ def main():
                 sys.argv[3]
                 ),
             pool_pre_ping=True)
-    output = engine.execute(
-            'SELECT * FROM {} ORDER BY id ASC'.format(
-                'states'
-                )
-            )
+    session = sessionmaker(bind=engine)
+    sess = session()
+    output = sess.query(State).order_by(State.id.asc()).all()
     for ro in output:
         print(f"{ro.id}: {ro.name}")
-    output.close()
+    sess.close()
 
 
 if __name__ == "__main__":
