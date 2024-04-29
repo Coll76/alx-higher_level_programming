@@ -15,6 +15,15 @@ import sys
 import urllib.request
 import urllib.parse
 
+"""
+takes in a URL, sends a request to
+the URL and displays the body of the response (decoded in utf-8).
+"""
+
+
+if len(sys.argv) != 2:
+    print("Invalid arguments")
+    exit 98
 email = sys.argv[2]
 data = urllib.parse.urlencode({'Your email is': email})
 data = data.encode('UTF-8')
