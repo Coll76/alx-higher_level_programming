@@ -12,7 +12,7 @@ You must use the with statement
 """
 
 import sys
-from urllib.request import HTTPRedirectHandler, build_opener, install_opener
+from urllib.request import HTTPRedirectHandler, build_opener, install_opener, urlopen
 import urllib.parse
 
 """
@@ -20,7 +20,7 @@ takes in a URL, sends a request to
 the URL and displays the body of the response (decoded in utf-8).
 """
 
-def Redirecthandler(HTTPRedirectHandler):
+def main(HTTPRedirectHandler):
     """
     takes in a URL, sends a request to
     the URL and displays the body of the response (decoded in utf-8)
@@ -38,4 +38,4 @@ def Redirecthandler(HTTPRedirectHandler):
         print(get)
 
     if __name__ == "__main__":
-        Redirecthandler()
+        main()
