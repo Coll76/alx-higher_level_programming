@@ -8,6 +8,9 @@ import urllib.request
 import urllib.parse
 import sys
 
+if len(sys.argv) != 2:
+    print("Invalid arguments")
+    exit(98)
 url = sys.argv[1]
 email = sys.argv[2]
 data = urllib.parse.urlencode({'Your email is': email})
