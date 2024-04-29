@@ -8,7 +8,7 @@ import urllib.request
 import urllib.parse
 import sys
 
-if len(sys.argv) != 2:
+if len(sys.argv) != 3:
     print("Invalid arguments")
     exit(98)
 url = sys.argv[1]
