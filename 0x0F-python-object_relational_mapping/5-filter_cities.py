@@ -18,10 +18,15 @@ if len(sys.argv) != 5:
 username, password, database, state = sys.argv[1:]
 db = MySQLdb.connect(host='localhost', passwd=password, user=username, db=database, port=3306)
 cursor = db.cursor()
-cursor.execute('SELECT cities FROM states ORDER BY cities.id ASC')
+cursor.execute('''
+    SELECT cities.name
+    FROM {}.states JOIN cities ON cities.state_id=states.id
+    WHERE states.name = '{}'
+    ORDER BY cities.id ASC
+    '''.format(database, state))
 
 rows = cursor.fetchall()
-for row in rows:
-    print(row)
+ro = ', '.join([row[0] for row in rows])
+print(ro)
 cursor.close()
 db.close()
