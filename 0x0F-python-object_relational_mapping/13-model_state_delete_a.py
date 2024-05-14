@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-import to connect to server
+use the module SQLAlchemy
 """
-
 import sys
 from sqlalchemy import create_engine, String, Integer, Column
 from sqlalchemy.orm import sessionmaker, relationship
@@ -10,30 +9,45 @@ from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 
 """
-lists all State objects from the database hbtn_0e_6_usa
+deletes all State objects with a name containing
+the letter a from the database hbtn_0e_6_usa
 take 3 arguments: mysql username, mysql password and database name
 import State and Base from model_state
 connect to a MySQL server running on localhost at port 3306
- sorted in ascending order by states.id
+code should not be executed when imported
 """
 
 
 def main():
     """
-    wraps code to single unit
+    Encapsulates the code
     """
+    if len(sys.argv) != 4:
+        print("Invalid arguments")
+        return
+
+    username, password, database = sys.argv[1:]
     engine = create_engine(
-            'mysql+mysqldb://{}:{}@localhost/{}'.format(
-                sys.argv[1],
-                sys.argv[2],
-                sys.argv[3]
-                ),
-            pool_pre_ping=True)
+                        'mysql+mysqldb://{}:{}@localhost/{}'.format(
+                            sys.argv[1],
+                            sys.argv[2],
+                            sys.argv[3]
+                            ))
+
     session = sessionmaker(bind=engine)
     sess = session()
-    output = sess.query(State).filter(State.name.like('%a%')).all()
-    for state in output:
-        sess.delete(state)
+
+    deleted_rec = sess.query(State).filter(
+            State.name.ilike('%a')).delete(synchronize_session=False)
+    """
+    Commit the changes
+    """
+    sess.commit()
+
+    rest_of_recs = sess.query(State).order_by(State.id.asc()).all()
+    for data in rest_of_recs:
+        print(f"{data.id}: {data.name}")
+
     sess.close()
 
 
