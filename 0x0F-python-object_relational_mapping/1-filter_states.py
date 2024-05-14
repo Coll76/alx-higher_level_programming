@@ -20,7 +20,13 @@ cur = db.cursor()
 """
 COLLATE utf8_bin makes it case sensitive
 """
-cur.execute('SELECT * FROM states WHERE name COLLATE utf8mb4_bin LIKE "N%" ORDER BY states.id ASC')
+cur.execute('''
+            SELECT *
+            FROM states
+            WHERE name COLLATE utf8mb4_bin LIKE "N%"
+            ORDER BY states.id ASC
+            ''')
+
 result = cur.fetchall()
 for data in result:
     print(data)
