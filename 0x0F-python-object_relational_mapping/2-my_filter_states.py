@@ -21,7 +21,7 @@ cur = db.cursor()
 cur.execute('''
             SELECT *
             FROM states
-            WHERE name="{}"
+            WHERE name COLLATE utf8mb4_bin="{}"
             ORDER BY states.id ASC
             '''.format(state_name_searched))
 
