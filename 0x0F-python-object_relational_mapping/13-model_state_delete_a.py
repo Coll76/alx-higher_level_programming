@@ -38,7 +38,7 @@ def main():
     sess = session()
 
     deleted_rec = sess.query(State).filter(
-            State.name.ilike('%a')).delete(synchronize_session=False)
+            State.name.ilike('%a%')).delete(synchronize_session=False)
     """
     Commit the changes
     """
